@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <world name="plen2_test">
+        <!-- Include a ground plane -->
+        <include>
+            <uri>model://ground_plane</uri>
+        </include>
+
+        <!-- Include a light source -->
+        <include>
+            <uri>model://sun</uri>
+        </include>
+
+        <!-- Physics Engine -->
+        <physics type="ode">
+            <max_step_size>0.001</max_step_size>
+            <real_time_factor>1.0</real_time_factor>
+        </physics>
+
+        <!-- Spawn the PLEN2 robot -->
+        <model name="plen2_robot">
+            <static>false</static>
+            <include>
+                <uri>model://plen2_gazebo</uri>
+            </include>
+        </model>
+    </world>
+</sdf>
