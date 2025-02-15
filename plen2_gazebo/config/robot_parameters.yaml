@@ -1,0 +1,23 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Controller update rate in Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    plen2_controller:
+      type: position_controllers/JointGroupPositionController
+      joints:
+        - left_shoulder_pitch
+        - right_shoulder_pitch
+        - left_thigh_pitch
+        - right_thigh_pitch
+        - left_ankle_pitch
+        - right_ankle_pitch
+      gains:
+        left_shoulder_pitch: {p: 10.0, i: 0.1, d: 0.01}
+        right_shoulder_pitch: {p: 10.0, i: 0.1, d: 0.01}
+        left_thigh_pitch: {p: 15.0, i: 0.1, d: 0.01}
+        right_thigh_pitch: {p: 15.0, i: 0.1, d: 0.01}
+        left_ankle_pitch: {p: 5.0, i: 0.1, d: 0.01}
+        right_ankle_pitch: {p: 5.0, i: 0.1, d: 0.01}
