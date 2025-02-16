@@ -6,7 +6,7 @@ set -e  # Exit immediately if any command fails
 CONTAINER_NAME="plen2_gazebo_container"
 IMAGE_NAME="osrf/ros:iron-desktop"
 PLEN_DIR="$HOME/PLEN"
-GITHUB_REPO="https://github.com/YOUR_GITHUB_USERNAME/PLEN.git"
+GITHUB_REPO="https://github.com/razerblade72611/Plen.git"
 GAZEBO_MODEL_PATH="$PLEN_DIR/install/plen2_gazebo/share/plen2_gazebo"
 
 echo "========================="
